@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-mood="clear" data-time-of-day="day">
+<div id="app" class="app">
+
+  <header class="topbar">
+    <div class="brand">🌤️ <span>Weather</span></div>
+
+    <div class="search-wrap">
+      <input id="search-input" type="text" placeholder="Search for a city…" autocomplete="off">
+      <div id="search-results" class="search-results"></div>
+    </div>
+
+    <div class="topbar-actions">
+      <button id="geo-btn" class="btn" type="button">📍 My location</button>
+      <button id="star-btn" class="icon-btn" type="button" title="Save to favorites">☆</button>
+      <button id="unit-temp-btn" class="icon-btn small" type="button" title="Toggle °C/°F">°C</button>
+      <button id="unit-wind-btn" class="icon-btn small" type="button" title="Toggle km/h / mph">km/h</button>
+      <button id="theme-btn" class="icon-btn" type="button" title="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <div id="error-banner" class="error-banner"></div>
+
+  <div id="favorites-bar" class="favorites-bar"></div>
+
+  <main class="main-grid">
+    <section id="current-card" class="current-card">
+      <div class="skeleton">Loading weather…</div>
+    </section>
+
+    <section class="panel">
+      <h3 class="panel-title">Next 24 hours — temperature</h3>
+      <div class="chart-wrap">
+        <canvas id="temp-chart"></canvas>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3 class="panel-title">Next 24 hours — chance of rain</h3>
+      <div class="chart-wrap">
+        <canvas id="precip-chart"></canvas>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3 class="panel-title">7-day forecast</h3>
+      <div id="daily-strip" class="daily-strip"></div>
+    </section>
+
+    <section class="panel">
+      <h3 class="panel-title">Daily details</h3>
+      <div id="daily-details" class="daily-details"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> — no API key required.
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.3/chart.umd.min.js"></script>
+<script type="module" src="dist/main.js"></script>
+</body>
+</html>
