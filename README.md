@@ -3,6 +3,10 @@
 Built with TypeScript, Open-Meteo and Chart.js.
 A dependency-light, fully client-side weather dashboard built with **TypeScript**, using the free **[Open-Meteo](https://open-meteo.com/)** API (no API key required) and **Chart.js** for charts.
 
+## Output
+
+![Output Screenshot](./Screenshot.png)
+
 ## Features
 
 - **City search** with debounced autocomplete (Open-Meteo geocoding API)
