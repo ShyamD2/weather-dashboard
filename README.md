@@ -1,5 +1,6 @@
-# Advanced Weather Dashboard
+## Weather Dashboard
 
+Built with TypeScript, Open-Meteo and Chart.js.
 A dependency-light, fully client-side weather dashboard built with **TypeScript**, using the free **[Open-Meteo](https://open-meteo.com/)** API (no API key required) and **Chart.js** for charts.
 
 ## Features
