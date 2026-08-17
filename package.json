@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "serve": "python3 -m http.server 8080",
+    "serve": "python -m http.server 8080",
     "start": "npm run build && npm run serve"
   },
   "devDependencies": {
